@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AnalysisResult, MacroIndicator, LearningNote, ReviewItem, ChartDataPoint, ChartEvent } from '../types';
+import type { AnalysisResult, MacroIndicator, LearningNote, ReviewItem, ChartDataPoint, ChartEvent } from '../types';
 
 const apiClient = axios.create({
   baseURL: 'http://localhost:3001/api',
