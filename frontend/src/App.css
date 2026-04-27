@@ -1,0 +1,29 @@
+/* StockLens Korea – minimal custom CSS (Tailwind handles most styling) */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #374151 #111827;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #374151;
+  border-radius: 3px;
+}
+
+body {
+  font-family: -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+}
+
+.strength-bar {
+  transition: width 0.6s ease;
+}

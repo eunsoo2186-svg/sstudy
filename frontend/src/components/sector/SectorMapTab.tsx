@@ -10,35 +10,75 @@ interface SectorNode {
 
 const SECTOR_TREE: SectorNode[] = [
   {
-    label: 'IT/기술',
+    label: 'IT / 기술',
     children: [
       {
         label: '반도체',
         children: [
-          { label: '메모리', children: [{ label: '삼성전자', ticker: '005930' }, { label: 'SK하이닉스', ticker: '000660' }] },
-          { label: '시스템반도체', children: [{ label: '퀄컴', ticker: 'QCOM' }, { label: '인텔', ticker: 'INTC' }] },
-          { label: '장비', children: [] },
-          { label: '소재', children: [] },
+          { label: '메모리', children: [{ label: 'SK하이닉스', ticker: '000660' }, { label: '삼성전자', ticker: '005930' }] },
+          { label: '시스템반도체', children: [{ label: '삼성전자', ticker: '005930' }] },
+          { label: '반도체장비·소재', children: [{ label: '동부', ticker: '005260' }] },
         ],
       },
-      {
-        label: '소프트웨어',
-        children: [
-          { label: '카카오', ticker: '035720' },
-          { label: '네이버', ticker: '035420' },
-        ],
-      },
-      { label: '인터넷', children: [] },
-      { label: '하드웨어', children: [] },
+      { label: '디스플레이', children: [{ label: 'LG디스플레이', ticker: '034220' }] },
+      { label: 'IT서비스', children: [{ label: '카카오', ticker: '035720' }, { label: '네이버', ticker: '035420' }, { label: '쿠팡', ticker: 'CPNG' }] },
+      { label: '전자', children: [{ label: '삼성전자', ticker: '005930' }, { label: 'LG전자', ticker: '066570' }] },
     ],
   },
-  { label: '에너지/유틸리티', children: [{ label: '석유/가스', children: [] }, { label: '신재생에너지', children: [] }] },
-  { label: '금융', children: [{ label: '은행', children: [] }, { label: '증권', children: [] }, { label: '보험', children: [] }] },
-  { label: '헬스케어/제약', children: [{ label: '제약', children: [] }, { label: '바이오', children: [] }, { label: '의료기기', children: [] }] },
-  { label: '소비재', children: [{ label: '식품/음료', children: [] }, { label: '유통/리테일', children: [] }] },
-  { label: '산업재', children: [{ label: '건설', children: [] }, { label: '기계/자동화', children: [] }] },
-  { label: '소재', children: [{ label: '철강', children: [] }, { label: '화학', children: [] }] },
-  { label: '통신', children: [{ label: '통신서비스', children: [] }, { label: '미디어/콘텐츠', children: [] }] },
+  {
+    label: '자동차',
+    children: [
+      { label: '완성차', children: [{ label: '현대차', ticker: '005380' }, { label: '기아', ticker: '000270' }] },
+      { label: '자동차부품', children: [{ label: '현대모비스', ticker: '012330' }, { label: '만도', ticker: '204320' }] },
+      { label: '배터리', children: [{ label: '삼성SDI', ticker: '006400' }, { label: 'LG에너지솔루션', ticker: '373220' }, { label: 'SK이노베이션', ticker: '096770' }] },
+    ],
+  },
+  {
+    label: '에너지 / 유틸리티',
+    children: [
+      { label: '전력', children: [{ label: '한전', ticker: '015760' }] },
+      { label: '가스', children: [{ label: '한국가스공사', ticker: '036460' }] },
+      { label: '신재생에너지', children: [{ label: '두산에너빌리티', ticker: '034020' }] },
+      { label: '석유·정유', children: [] },
+    ],
+  },
+  {
+    label: '금융',
+    children: [
+      { label: '은행', children: [{ label: 'KB금융', ticker: '105560' }, { label: '우리금융', ticker: '316140' }, { label: '신한지주', ticker: '055550' }, { label: '하나금융지주', ticker: '086790' }] },
+      { label: '보험', children: [{ label: '삼성화재', ticker: '000810' }, { label: '한화생명', ticker: '088350' }] },
+      { label: '증권', children: [{ label: '삼성증권', ticker: '016360' }] },
+    ],
+  },
+  {
+    label: '헬스케어 / 바이오',
+    children: [
+      { label: '의약', children: [{ label: '셀트리온', ticker: '068270' }, { label: '유한양행', ticker: '000100' }] },
+      { label: '바이오', children: [{ label: '삼성바이오로직스', ticker: '207940' }] },
+      { label: '의료기기', children: [{ label: '오스템임플란트', ticker: '048260' }] },
+    ],
+  },
+  {
+    label: '화학 / 소재',
+    children: [
+      { label: '화학', children: [{ label: '롯데케미칼', ticker: '011170' }, { label: 'LG화학', ticker: '051910' }] },
+      { label: '철강', children: [{ label: 'POSCO홀딩스', ticker: '005490' }, { label: '현대제철', ticker: '004020' }] },
+    ],
+  },
+  {
+    label: '소비재',
+    children: [
+      { label: '식품', children: [{ label: '농심', ticker: '004370' }, { label: 'CJ제일제당', ticker: '097950' }] },
+      { label: '음료', children: [{ label: '롯데칠성음료', ticker: '005300' }] },
+      { label: '임의소비재', children: [{ label: '현대백화점', ticker: '069960' }] },
+    ],
+  },
+  {
+    label: '통신',
+    children: [
+      { label: '통신서비스', children: [{ label: 'SK텔레콤', ticker: '017670' }, { label: 'KT', ticker: '030200' }, { label: 'LG유플러스', ticker: '032640' }] },
+    ],
+  },
 ]
 
 interface Props {
