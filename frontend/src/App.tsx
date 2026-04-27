@@ -220,13 +220,13 @@ function PriceChart({ result }: PriceChartProps) {
     d.events.map(e => ({ date: d.date, impact: e.impact, title: e.title }))
   );
 
-  const tickFormatter = (v: number) => {
-    if (v >= 1_000_000) return (v / 1_000_000).toFixed(1) + 'M';
-    if (v >= 1_000) return (v / 1_000).toFixed(0) + 'k';
-    return String(v);
+  const tickFormatter = (value: number) => {
+    if (value >= 1_000_000) return (value / 1_000_000).toFixed(1) + 'M';
+    if (value >= 1_000) return (value / 1_000).toFixed(0) + 'k';
+    return String(value);
   };
 
-  const priceFormatter = (v: number) => (v / 1000).toFixed(0) + 'K';
+  const priceFormatter = (value: number) => (value / 1000).toFixed(0) + 'K';
 
   return (
     <div>
@@ -335,7 +335,7 @@ function HotReasonCard({ reason }: HotReasonCardProps) {
           </div>
         </div>
         <button
-          onClick={() => setExpanded(v => !v)}
+          onClick={() => setExpanded(prev => !prev)}
           className="text-gray-400 hover:text-white transition-colors mt-0.5"
         >
           {expanded ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
@@ -469,7 +469,7 @@ function SectorTreeNode({ node, depth, onCompanyClick }: SectorNodeProps) {
       {!isLeaf && (
         <button
           className="flex items-center gap-2 py-2 px-2 w-full text-left hover:bg-gray-800/60 rounded-lg transition-colors"
-          onClick={() => setOpen(v => !v)}
+          onClick={() => setOpen(prev => !prev)}
         >
           {open ? <ChevronDown size={14} className="text-gray-400 flex-shrink-0" /> : <ChevronRight size={14} className="text-gray-400 flex-shrink-0" />}
           <span className={depthStyles[Math.min(depth, 2)]}>{node.name}</span>
