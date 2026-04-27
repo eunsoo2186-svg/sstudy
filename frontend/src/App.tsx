@@ -47,7 +47,7 @@ interface SectorNode {
 // ── Constants ────────────────────────────────────────────────────────────────
 
 const KOREAN_MACRO: KoreanMacroItem[] = [
-  { name: '한국은행 기준금리', displayValue: '3.25%', trend: 'stable', impact: 'neutral', description: '동결 기조 유지. 하반기 인하 기능성 논의 중.', sectorRelevance: '부동산·금융 섹터 영향' },
+  { name: '한국은행 기준금리', displayValue: '3.25%', trend: 'stable', impact: 'neutral', description: '동결 기조 유지. 하반기 인하 가능성 논의 중.', sectorRelevance: '부동산·금융 섹터 영향' },
   { name: '원/달러 환율', displayValue: '1,280원', trend: 'down', impact: 'positive', description: '원화 강세 전환. 수입물가 안정 기대.', sectorRelevance: '수출 기업 마진 영향' },
   { name: 'KOSPI 지수', displayValue: '2,650p', trend: 'up', impact: 'positive', description: '외국인 순매수 지속으로 상승 모멘텀 유지.', sectorRelevance: '시장 전반 심리 지표' },
   { name: 'KOSDAQ 지수', displayValue: '940p', trend: 'up', impact: 'positive', description: '바이오·IT 종목 주도로 강세.', sectorRelevance: '성장주·소형주 심리' },

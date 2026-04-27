@@ -49,7 +49,7 @@ const hyundaiEvents: { [key: string]: ChartEvent[] } = {
   '2024-04-25': [{ date: '2024-04-25', type: 'earnings', title: 'Q1 2024 실적', detail: '영업이익 3.7조원. 북미·인도 판매 호조.', impact: 'positive' }],
 };
 
-const celltriionEvents: { [key: string]: ChartEvent[] } = {
+const celltrionEvents: { [key: string]: ChartEvent[] } = {
   '2024-02-01': [{ date: '2024-02-01', type: 'news', title: '렉키로나 미국 허가', detail: '코로나 항체치료제 미국 FDA 최종 승인.', impact: 'positive' }],
   '2024-04-11': [{ date: '2024-04-11', type: 'earnings', title: 'Q1 2024 실적', detail: '매출 7,200억원, 영업이익 2,100억원.', impact: 'positive' }],
 };
@@ -183,7 +183,7 @@ const mockHyundai: AnalysisResult = {
   ],
 };
 
-const mockCelltriion: AnalysisResult = {
+const mockCelltrion: AnalysisResult = {
   company: { name: '셀트리온', ticker: '068270', price: 178000, priceChange: 3500, priceChangePercent: 2.0, marketCap: 23500000000000, per: 42.1, pbr: 4.2, peg: 1.35, psr: 8.1, roe: 9.8, roa: 5.6, debtRatio: 38.2, dividendYield: 0.3, market: 'KOSPI' },
   sector: { major: '헬스케어', middle: '바이오', minor: '바이오시밀러', detail: '항체 바이오시밀러', trendCategories: ['바이오시밀러 시장', 'K-바이오', '신약 개발', '글로벌 직판', '면역질환'] },
   hotReasons: [
@@ -200,7 +200,7 @@ const mockCelltriion: AnalysisResult = {
     { type: 'PEG', value: 1.35, benchmark: 1.5, signal: 'bullish', description: 'PEG 1.35로 성장성 감안 시 합리적 밸류에이션.' },
     { type: 'ROE', value: 9.8, benchmark: 8.0, signal: 'bullish', description: '바이오 기업 평균 ROE 상회. 수익성 개선 추세.' },
   ],
-  chartData: generateChartData(155000, celltriionEvents),
+  chartData: generateChartData(155000, celltrionEvents),
   competitors: [
     { name: '셀트리온', ticker: '068270', marketShare: 12.5, rdRate: 15.2, roa: 5.6, debtRatio: 38.2, keyAdvantage: '바이오시밀러 파이프라인' },
     { name: '삼성바이오로직스', ticker: '207940', marketShare: 8.1, rdRate: 8.3, roa: 12.1, debtRatio: 28.5, keyAdvantage: 'CMO 1위' },
@@ -340,8 +340,8 @@ const COMPANY_DATABASE: { [key: string]: AnalysisResult } = {
   '005930': mockSamsung,
   '현대차': mockHyundai,
   '005380': mockHyundai,
-  '셀트리온': mockCelltriion,
-  '068270': mockCelltriion,
+  '셀트리온': mockCelltrion,
+  '068270': mockCelltrion,
   'LG에너지솔루션': mockLGEnergy,
   '373220': mockLGEnergy,
   '카카오': mockKakao,
